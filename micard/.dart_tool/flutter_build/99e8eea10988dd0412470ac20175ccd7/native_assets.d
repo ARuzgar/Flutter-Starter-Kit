@@ -1,0 +1,1 @@
+ /Users/Ventum/Flutter-Ruzgar/Flutter-Starter-Kit/micard/.dart_tool/flutter_build/99e8eea10988dd0412470ac20175ccd7/native_assets.yaml: 

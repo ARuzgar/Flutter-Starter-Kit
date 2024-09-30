@@ -1,0 +1,1 @@
+ /Users/Ventum/Flutter-Ruzgar/Flutter-Starter-Kit/layout\ challenge/layout_challenge/.dart_tool/flutter_build/fccc8055bb1eff04cb5ac6c713c3a356/native_assets.yaml: 
