@@ -25,62 +25,35 @@ class _xylophoneState extends State<xylophone> {
     player.play(AssetSource('note$soundNumber.wav'));
   }
 
+  Expanded xyloButton(int colorIndex, int soundNumber) {
+    return Expanded(
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.amber[colorIndex * 100],
+          shape: BeveledRectangleBorder(),
+        ),
+        onPressed: () {
+          soundPlay(soundNumber);
+        },
+        child: null,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Column(
-        children: <Widget>[
-          ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(Colors.amber[900])),
-              onPressed: () {
-                soundPlay(1);
-              },
-              child: null),
-          ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(Colors.amber[800])),
-              onPressed: () {
-                soundPlay(2);
-              },
-              child: null),
-          ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(Colors.amber[700])),
-              onPressed: () {
-                soundPlay(3);
-              },
-              child: null),
-          ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(Colors.amber[600])),
-              onPressed: () {
-                soundPlay(4);
-              },
-              child: null),
-          ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(Colors.amber[500])),
-              onPressed: () {
-                soundPlay(5);
-              },
-              child: null),
-          ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(Colors.amber[400])),
-              onPressed: () {
-                soundPlay(6);
-              },
-              child: null),
-          ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(Colors.amber[300])),
-              onPressed: () {
-                soundPlay(7);
-              },
-              child: null),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        xyloButton(9, 1),
+        xyloButton(8, 2),
+        xyloButton(7, 3),
+        xyloButton(6, 4),
+        xyloButton(5, 5),
+        xyloButton(4, 6),
+        xyloButton(3, 7),
+      ],
     );
   }
 }
